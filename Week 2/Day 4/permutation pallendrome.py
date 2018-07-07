@@ -4,18 +4,19 @@ import unittest
 def has_palindrome_permutation(the_string):
     n=the_string
     strs=['']*26
+    count=0
     
     for i in range(0,len(n)):
-    	print(ord(n[i])%97)
+    	
     	k=ord(n[i])%97
     	if(strs[k]==''):
     		strs[k]=n[i]
+    		count=count+1
     	else:
     		strs[k]=''
-    count=0
-    for i in range(0,len(strs)):
-    	if(strs[i]!=''):
-    		count=count+1
+    		count=count-1
+    
+    
     if(count==0 or count==1):
     	return True
     else:
