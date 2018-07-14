@@ -36,5 +36,3 @@ def dup_files(main_folder):
                 seen_hashes[file_hsh] = (clet, current_path)
     return duplicates
 
-if __name__ == '__main__':
-    print(dup_files("//home//yashwanth//Desktop//Main"))
